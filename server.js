@@ -76,12 +76,12 @@ app.post('/mouse/:x/:y', function(req, res){
                 sendKeys(req.query.key).then(() => {
                         mouseChild.stdin.write((x) + "\n");
                         mouseChild.stdin.write((y) + "\n");
-                        mouseChild.stdin.wri5te(req.query.r + "\n");
+                        mouseChild.stdin.write(req.query.r + "\n");
                         // console.log("Click with key sent");
                 }).catch((err) => {
                         console.error(err);
                 });
-        }undefined5undefined
+        }
         else{
                 mouseChild.stdin.write(x + "\n");
                 mouseChild.stdin.write(y + "\n");
